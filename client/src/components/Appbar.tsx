@@ -1,10 +1,10 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Avatar } from "../pages/BlogCard";
 
 export function Appbar() {
     const navigate = useNavigate()
     return <div className="border-b flex justify-between px-10 py-4">
-        <div className="font-extrabold flex flex-col justify-center text-3xl">Mediom</div>
+        <div className="font-extrabold flex flex-col justify-center text-3xl"><Link to={"/blogs"}>Mediom</Link></div>
         <div>
             <button onClick={()=>{
                 localStorage.removeItem("token");
